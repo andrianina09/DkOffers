@@ -1,5 +1,5 @@
 // ============================================================
-// 1. TABLEAU DES OFFRES (TU PEUX AJOUTER AUTANT QUE TU VEUX)
+// 1. TABLEAU DES OFFRES
 // ============================================================
 const offers = [
     {
@@ -7,7 +7,7 @@ const offers = [
         icon: '₿',
         title: 'Binance',
         desc: 'Offer description',
-        link: 'https://my.mylead.global/...'  // Remplace par ton lien
+        link: 'https://my.mylead.global/...' 
     },
     {
         id: 2,
