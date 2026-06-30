@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DkOffers</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <div class="logo-wrapper">
+            <a href="#" class="dk-ref" role="button"><img src="images/logo_dkoffers.png" alt="logo" loading="lazy"></a>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <div class="desc-home-wrapper">
+                <h2>
+                    Welcome to <span style="color: chocolate;">DKoffers</span>, your go-to platform for discovering the best online opportunities, carefully handpicked just for you!
+                </h2>
+                <p>
+                    We understand that navigating the vast ocean of online offers can be overwhelming. With so many complex, unreliable, and sometimes downright misleading opportunities out there, finding genuine and rewarding ones often feels like searching for a needle in a haystack. That's exactly why we created DKoffers: a dedicated space where every single offer is meticulously analyzed, verified, and presented in a clear and transparent manner, empowering you to make confident and informed decisions. 
+                </p>
+                <p>
+                    So what are you waiting for? Browse our curated selection right now, click on the offers that catch your eye, and start seizing the opportunities waiting for you.
+                </p>
+            </div>
+        </section>
+        <section id="offers">
+            <h2 class="offers-title">Top Offers</h2>
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Les cartes seront injectées par JavaScript -->
+                    </div>
+                    <button class="carousel-btn prev-btn" id="prevBtn">❮</button>
+                    <button class="carousel-btn next-btn" id="nextBtn">❯</button>
+                </div>
+                <div class="carousel-indicators" id="indicators"></div>
+            </div>        
+        </section>
+    </main>
+    <script src="JS/script.js" defer></script>
+</body>
+</html>

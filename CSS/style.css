@@ -1,0 +1,214 @@
+:root{
+    --bg-color : #ffffff;
+    --hd-bg-color : #121314;
+    --text-color : #000000;
+    --hd-text-color : #ffffff;
+    --offers-section-color : #f2f2f2;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", "Roboto", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+body header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    background-color: var(--hd-bg-color);
+    color: var(--hd-text-color);
+    padding: 4px 0 0;
+}
+header .logo-wrapper {
+    width: fit-content;
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--bg-color);
+}
+header .logo-wrapper img{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 70px;
+}
+main {
+    position: relative;
+}
+main::before {
+    content: "";
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 74px;
+}
+#home .desc-home-wrapper {
+    max-width: 1200px;
+    margin: 15px auto 0;
+    padding: 1rem;
+}
+.desc-home-wrapper h2, .desc-home-wrapper p {
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    word-break: break-word;
+    line-height: 2rem;
+}
+.desc-home-wrapper h2{
+    margin-bottom: 15px;
+}
+.desc-home-wrapper p{
+    margin-top: 10px;
+}
+.offers-title {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+/* ===== CARROUSEL ===== */
+.carousel-wrapper {
+    background-color: var(--offers-section-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 1rem 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+}
+
+.offer-card {
+    flex: 0 0 calc(33.333% - 14px); /* 3 cartes par défaut */
+    min-width: 0;
+    background-color: var(--bg-color);
+    border-radius: 12px;
+    padding: 20px 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    border: 1px solid #eaeaea;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.offer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+}
+
+.offer-card .offer-icon {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.offer-card .offer-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: #1a1a2e;
+}
+.offer-card .offer-btn {
+    display: inline-block;
+    margin-top: 14px;
+    background: #1a1a2e;
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+.offer-card .offer-btn:hover {
+    background: #16213e;
+}
+
+/* Boutons de navigation */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.85);
+}
+
+.prev-btn {
+    left: 12px;
+}
+
+.next-btn {
+    right: 12px;
+}
+
+/* Indicateurs (points) */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.carousel-indicators .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-indicators .dot.active {
+    background: #1a1a2e;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .offer-card {
+        flex: 0 0 calc(50% - 10px); /* 2 cartes */
+    }
+}
+
+@media (max-width: 600px) {
+    .offer-card {
+        flex: 0 0 100%; /* 1 carte */
+    }
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+}
